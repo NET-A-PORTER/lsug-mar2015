@@ -65,6 +65,11 @@ body {
     font-weight: 200;
 }
 
+.codehighlight {
+    color: red;
+    font-weight: bold;
+}
+
 h1 {
     font-size: 80px;
     margin-top: 125px;
@@ -103,6 +108,7 @@ h3 {
     width: 900px;
     min-height: 700px;
     padding: 10px;
+    padding-bottom: 60px;
     margin: 0px auto;
 
     -webkit-box-sizing: border-box;

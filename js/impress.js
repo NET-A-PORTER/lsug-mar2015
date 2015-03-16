@@ -320,7 +320,9 @@
             
             css(el, {
                 position: "absolute",
-                transform: "translate(-50%,-50%)" +
+                // transform: "translate(-50%,-50%)" +
+                // Hacked:
+                transform: "translate(-50%,-350px)" +
                            translate(step.translate) +
                            rotate(step.rotate) +
                            scale(step.scale),
