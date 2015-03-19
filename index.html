@@ -29,16 +29,129 @@
 
 <div id="impress">
     
-    <!--
-        Slides start here!
-    -->
-    <section class="step" data-x="-1500">
+    <section class="step" data-x="-1500" style="text-align: center">
         <h2 class="group-logo">
             <span class="the">THE</span><br/>NET-A-PORTER<br/>GROUP
         </h2>
-        <h1><em>impress.js</em> Template</h1>
-        <h3>Use the left and right arrow keys!</h3>
+        <h1><em>Product API</em>: lessons learned</h1>
+        <h3>Scala, Akka and Spray</h3>
     </section>
+
+    <section class="step" data-x="0">
+        <img src="./images/nap-listing.png" width="900" />
+    </section>
+
+    <section class="step" data-x="1500">
+        <img src="./images/nap-details.png" width="900" />
+    </section>
+
+    <section class="step" data-x="3000">
+        <img src="./images/ton-listing.png" width="900" />
+    </section>
+
+    <section class="step" data-x="4500">
+        <img src="./images/mrp-listing.png" width="900" />
+    </section>
+
+    <div class="step" data-x="6000">
+        <h2>Listing API</h2>
+        <pre><code class="scala">curl "/product/summaries?business=NAP&amp;categoryIds=2&amp;country=GB&amp;lang=en&amp;limit=60&amp;offset=0"
+        </code></pre>
+    </div>
+
+    <div class="step" data-x="7500">
+        <h2>Listing API</h2>
+        <pre><code class="json">{
+  "data": [
+    {
+      "id": 512693,
+      "name": "Double-breasted piqué blazer",
+      "price": {
+        "divisor": 100,
+        "duty": 0,
+        "tax": 21750,
+        "gross": 130500,
+        "net": 108750,
+        "currency": "GBP"
+      },
+      "onSale": false,
+      "brand": {
+        "id": 472,
+        "name": "Balmain"
+      },
+      "badges": [
+        "In_Stock"
+      ]
+    },
+
+    ...
+
+  "metadata": {
+    "categoryFacets": [
+      {
+        "id": 4,
+        "count": 3164,
+        "children": [
+          {
+            "id": 12243,
+            "count": 55,
+          }
+        ]
+      },
+
+      ...
+
+    ],
+
+    "saleableStandardSizeFacets": [
+      {
+        "name": "XS",
+        "count": 4534,
+        "id": "00003_XS_Clothing",
+        "scheme": "Clothing",
+        "sort": 3
+      },
+
+      ...
+
+    ],
+
+    "colourFacets": [
+      {
+        "id": 45,
+        "count": 21
+      },
+
+    ]
+  }
+}
+
+
+        </code></pre>
+    </div>
+
+    <div class="step" data-x="9000">
+        <h2>Category API</h2>
+        <pre><code class="scala">curl "/categories?business=MRP&amp;country=GB&amp;lang=en"
+        </code></pre>
+    </div>
+
+    <div class="step" data-x="10500">
+        <h2>Category API</h2>
+        <pre><code class="json">[
+  {
+    "name": "Lipstick",
+    "urlKey": "Lipstick",
+    "id": 11153,
+    "sort": 21,
+    "parentId": 10154
+  },
+
+  ...
+]
+
+        </code></pre>
+    </div>
 
     <div class="step" data-x="0">
         <h2>Monitoring</h2>
@@ -184,8 +297,6 @@ def route = sealRoute {
             <img src="./images/kamon-cloudwatch-metrics.png" width="800"/>
         </div>
     </div>
-
-    
 
 </div>
 
