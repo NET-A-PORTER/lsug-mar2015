@@ -5,7 +5,7 @@ val lines = scala.io.Source.fromFile("index.html").getLines.toSeq
 var xValue = -X_OFFSET
 var yValue = 0
 
-val dataY = "data-y=\"([-0-9]+)\"".r
+val dataY = ".*data-y=\"([-0-9]+)\".*".r
 
 val newLines = lines map { line => 
 
@@ -22,7 +22,9 @@ val newLines = lines map { line =>
 		if(line.contains("snap-vertical")) {
 	    yValue = line match {
 	    	case dataY(y) => y.toInt
-	    	case _ => yValue
+	    	case _ => 
+	    	println(line)
+	    	sys.error("snap-vertical slide should have data-y")
 	    }
     } else {
     	fixedLine = fixedLine.replaceAll("data-y=\"[-0-9]+\"", s"""data-y="${yValue}"""")
