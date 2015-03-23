@@ -66,11 +66,13 @@
         </ul>
     </div>
 
-    <section class="step" data-x="6000" data-y="0">
-        <img src="./images/scala-workshop.png" width="900" />
+    <section class="step" data-x="9000" data-y="0">
+        <br />
+        <br />
+        <img src="./images/scala-workshop.jpg" width="900" />
     </section>    
 
-    <div class="step" data-x="9000" data-y="0">
+    <div class="step" data-x="10500" data-y="0">
         <h2>Listing Endpoint</h2>
         <pre><code class="bash">curl "/product/summaries?business=NAP
                         &amp;categoryIds=2
@@ -82,6 +84,16 @@
     </div>
 
     <div class="step" data-x="10500" data-y="0">
+        <h2>Product API</h2>
+        <ul>
+            <li>Scala, Akka, Spray</li>
+            <li>All three websites</li>
+            <li>Website and mobile apps</li>
+            <li>Product Listing and Details pages</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="12000" data-y="0">
         <h2>Listing Endpoint</h2>
         <pre><code class="json">{
   "data": [
@@ -149,17 +161,17 @@
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-x="10500" data-y="175"></section>
+    <section class="step snap-vertical" data-x="12000" data-y="175"></section>
 
-    <section class="step snap-vertical" data-x="10500" data-y="800"></section>
+    <section class="step snap-vertical" data-x="12000" data-y="800"></section>
 
-    <section class="step snap-vertical" data-x="10500" data-y="1650"></section>
+    <section class="step snap-vertical" data-x="12000" data-y="1650"></section>
 
-    <section class="step snap-vertical" data-x="10500" data-y="2500"></section>
+    <section class="step snap-vertical" data-x="12000" data-y="2500"></section>
 
-    <section class="step snap-vertical" data-x="10500" data-y="3300"></section>
+    <section class="step snap-vertical" data-x="12000" data-y="3300"></section>
 
-    <div class="step" data-x="12000" data-y="3300">
+    <div class="step" data-x="13500" data-y="3300">
         <h2>Category Endpoint</h2>
         <pre><code class="scala">curl "/categories?business=MRP
                  &amp;country=GB
@@ -167,7 +179,7 @@
         </code></pre>
     </div>
 
-    <div class="step" data-x="13500" data-y="3300">
+    <div class="step" data-x="15000" data-y="3300">
         <h2>Category Endpoint</h2>
         <pre><code class="json">[
   {
@@ -180,29 +192,29 @@
 ]</code></pre>
     </div>
 
-    <div class="step" data-x="15000" data-y="3300">
+    <div class="step" data-x="16500" data-y="3300">
         <h2>Monitoring</h2>
         <div style="text-align: center">
             <img src="./images/spray-metrics-issue.png" width="800"/>
         </div>
     </div>
 
-    <section class="step snap-vertical" data-y="6900" data-x="15000"></section>
+    <section class="step snap-vertical" data-y="6900" data-x="16500"></section>
 
-    <div class="step" data-x="16500" data-y="6900">
+    <div class="step" data-x="18000" data-y="6900">
         <h2>Monitoring</h2>
         <div style="text-align: center">
             <img src="./images/spray-metrics-pr.png" width="800"/>
         </div>
     </div>
 
-    <section class="step snap-vertical" data-y="8400" data-x="16500"></section>
+    <section class="step snap-vertical" data-y="8400" data-x="18000"></section>
 
-    <section class="step snap-vertical" data-y="9900" data-x="16500"></section>
+    <section class="step snap-vertical" data-y="9900" data-x="18000"></section>
 
-    <section class="step snap-vertical" data-y="10375" data-x="16500"></section>
+    <section class="step snap-vertical" data-y="10375" data-x="18000"></section>
 
-    <div class="step" data-y="10375" data-x="18000">
+    <div class="step" data-y="10375" data-x="19500">
         <h2>salad-metrics</h2>
         <pre><code class="scala">trait Service
     extends HttpService
@@ -253,28 +265,28 @@ def route = sealRoute {
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-y="11080" data-x="18000"></section>
+    <section class="step snap-vertical" data-y="11080" data-x="19500"></section>
 
-    <section class="step snap-vertical" data-y="11850" data-x="18000"></section>
+    <section class="step snap-vertical" data-y="11850" data-x="19500"></section>
 
-    <section class="step snap-vertical" data-y="12050" data-x="18000"></section>
+    <section class="step snap-vertical" data-y="12050" data-x="19500"></section>
 
-    <section class="step snap-vertical" data-y="12650" data-x="18000"></section>
+    <section class="step snap-vertical" data-y="12650" data-x="19500"></section>
 
-    <div class="step" data-x="19500" data-y="12650">
+    <div class="step" data-x="21000" data-y="12650">
         <h2>Metrics Page</h2>
         <pre><code class="json">{
   "counters": {
-    "summaries.exceptions": {
+    "categories.exceptions": {
       "count": 4
     },
-    "summaries.successes": {
+    "categories.successes": {
       "count": 5410
     }
     ...
   },
   "timers": {
-    "summaries": {
+    "categories": {
       "rate_units": "calls/second",
       "count": 5414,
       "duration_units": "seconds",
@@ -298,7 +310,9 @@ def route = sealRoute {
 }</code></pre>
     </div>
 
-    <div class="step" data-x="21000" data-y="12750">
+    <section class="step snap-vertical" data-y="600" data-x="19500"></section>
+
+    <div class="step" data-x="22500" data-y="12650">
         <h2>Grafana</h2>
         <div style="text-align: center">
             <br />
@@ -306,7 +320,7 @@ def route = sealRoute {
         </div>
     </div>
 
-    <div class="step" data-x="22500" data-y="12750">
+    <div class="step" data-x="24000" data-y="12650">
         <h2>What next?</h2>
         <ul>
             <li>Less intrusive</li>
@@ -315,13 +329,13 @@ def route = sealRoute {
         </ul>
     </div>
 
-    <section class="step" data-x="24000" data-y="12750">
+    <section class="step" data-x="25500" data-y="12650">
         <br />
         <br />
         <img src="./images/kamon-logo.png" width="800" />
     </section>
 
-    <div class="step" data-x="25500" data-y="12750">
+    <div class="step" data-x="27000" data-y="12650">
         <h2>Kamon</h2>
         <ul>
             <li>Out of the box support</li>
@@ -334,7 +348,7 @@ def route = sealRoute {
         </ul>
     </div>
 
-    <div class="step" data-x="27000" data-y="12750">
+    <div class="step" data-x="28500" data-y="12650">
         <h2>Kamon</h2>
         <ul>
             <li>Graphite, StatsD and Datadog</li>
@@ -346,7 +360,7 @@ def route = sealRoute {
         </ul>
     </div>
 
-    <div class="step" data-x="28500" data-y="12750">
+    <div class="step" data-x="30000" data-y="12650">
         <h2>kamon-cloudwatch</h2>
         <div style="text-align: center">
             <br />
