@@ -363,12 +363,50 @@ def route = sealRoute {
     </div>
 
     <div class="step" data-x="31500" data-y="14100">
-        <h2>kamon-cloudwatch</h2>
+        <h2>HTTP Latency</h2>
         <div style="text-align: center">
             <br />
             <img src="./images/kamon-cloudwatch-metrics.png" width="900"/>
         </div>
     </div>
+
+    <div class="step" data-x="33000" data-y="14100">
+        <h2>Mailbox Size</h2>
+        <div style="text-align: center">
+            <img src="./images/cloudwatch-products-mailbox-size.png" width="900"/>
+        </div>
+    </div>
+
+    <div class="step" data-x="34500" data-y="14100">
+        <h2>Queued Task Count</h2>
+        <div style="text-align: center">
+            <img src="./images/cloudwatch-prod-request-count.png" width="900"/>
+            <img src="./images/cloudwatch-prod-queued-task-count.png" width="900"/>
+        </div>
+    </div>
+
+    <div class="step" data-x="36000" data-y="14100">
+        <h2>Auto Scaling</h2>
+        <div style="text-align: center">
+            <img src="./images/gatling.png" width="900"/>
+            <img src="./images/cloudwatch-healthy-instances.png" width="900" style="padding-left: 20px;"/>
+        </div>
+    </div>
+
+    <div class="step" data-x="36000" data-y="14100">
+        <h2>spray-http Testing</h2>
+        <pre><code class="scala">val pipeline = (
+  logRequest(log)
+  ~> addHeader(`Accept-Encoding`(HttpEncodings.gzip))
+  ~> sendReceive
+  ~> decode(Gzip)
+  ~> logResponse(log)
+  ~> unmarshal[SolrDocuments]
+)
+
+val response = pipeline(HttpRquest(...))
+        </code></pre>
+    </div>    
 
 </div>
 
