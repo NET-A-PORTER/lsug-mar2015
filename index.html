@@ -393,20 +393,43 @@ def route = sealRoute {
         </div>
     </div>
 
-    <div class="step" data-x="36000" data-y="14100">
+    <div class="step" data-x="37500" data-y="14100">
         <h2>spray-http Testing</h2>
-        <pre><code class="scala">val pipeline = (
-  logRequest(log)
-  ~> addHeader(`Accept-Encoding`(HttpEncodings.gzip))
-  ~> sendReceive
-  ~> decode(Gzip)
-  ~> logResponse(log)
-  ~> unmarshal[SolrDocuments]
-)
+        <pre><code class="scala">class PriceClient {
+  
+  val pipeline = (
+    logRequest(log)
+    ~> addHeader(`Accept-Encoding`(gzip))
+    ~> sendReceive
+    ~> decode(Gzip)
+    ~> logResponse(log)
+    ~> unmarshal[Price]
+  )
 
-val response = pipeline(HttpRquest(...))
-        </code></pre>
-    </div>    
+  val response = pipeline(HttpRquest(...))
+}</code></pre>
+    </div>
+
+    <section class="step snap-vertical" data-y="14350" data-x="37500"></section>
+
+    <div class="step" data-x="39000" data-y="14350">
+        <h2>spray-http Testing</h2>
+        <pre><code class="scala">class PriceClient(<span class="codehighlight">transport: ActorRef</span>) {
+  
+  val pipeline = (
+    logRequest(log)
+    ~> addHeader(`Accept-Encoding`(gzip))
+    ~> sendReceive(<span class="codehighlight">transport</span>)
+    ~> decode(Gzip)
+    ~> logResponse(log)
+    ~> unmarshal[Price]
+  )
+
+  val response = pipeline(HttpRquest(...))
+}</code></pre>
+    </div>
+
+    <section class="step snap-vertical" data-y="14600" data-x="39000"></section>
 
 </div>
 
