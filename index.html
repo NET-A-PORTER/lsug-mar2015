@@ -406,7 +406,7 @@ def route = sealRoute {
     ~> unmarshal[Price]
   )
 
-  val response = pipeline(HttpRquest(...))
+  val resp = pipeline(HttpRequest(...))
 }</code></pre>
     </div>
 
@@ -425,11 +425,45 @@ def route = sealRoute {
     ~> unmarshal[Price]
   )
 
-  val response = pipeline(HttpRquest(...))
+  val resp = pipeline(HttpRequest(...))
 }</code></pre>
     </div>
 
     <section class="step snap-vertical" data-y="14600" data-x="39000"></section>
+
+    <div class="step" data-x="39000" data-y="14350">
+        <h2>Production</h2>
+        <pre><code class="scala">import akka.io.IO
+import spray.can.Http
+
+val prices = new PriceClient(IO(Http))</code></pre>
+    </div>
+
+    <div class="step" data-x="39000" data-y="14350">
+        <h2>Unit Tests</h2>
+        <pre><code class="scala">import akka.testkit.TestProbe
+
+val transport = TestProbe()
+val pc = new PriceClient(transport.ref)
+
+pc ! GetPrice(12345, GB)
+
+val req = transport.expectMsgType[HttpRequest]
+req.method should equal(GET)
+req.uri.toString should equal("http://prices")
+
+transport.reply(HttpResponse(entity = 
+  HttpEntity("""
+    {
+        "currency": "GBP",
+        "amount": 12345
+    }
+  """)
+)
+
+
+</code></pre>
+    </div>
 
 </div>
 
