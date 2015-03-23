@@ -66,19 +66,18 @@
     </div>
 
     <div class="step" data-x="9000" data-y="0">
-        <h2>Listing API</h2>
-        <pre><code class="bash">curl "/product/summaries
-            ?business=NAP
-            &amp;categoryIds=2
-            &amp;country=GB
-            &amp;lang=en
-            &amp;limit=60
-            &amp;offset=0"
+        <h2>Listing Endpoint</h2>
+        <pre><code class="bash">curl "/product/summaries?business=NAP
+                        &amp;categoryIds=2
+                        &amp;country=GB
+                        &amp;lang=en
+                        &amp;limit=60
+                        &amp;offset=0"
         </code></pre>
     </div>
 
     <div class="step" data-x="10500" data-y="0">
-        <h2>Listing API</h2>
+        <h2>Listing Endpoint</h2>
         <pre><code class="json">{
   "data": [
     {
@@ -157,7 +156,9 @@
 
     <div class="step" data-x="12000" data-y="3300">
         <h2>Category API</h2>
-        <pre><code class="scala">curl "/categories?business=MRP&amp;country=GB&amp;lang=en"
+        <pre><code class="scala">curl "/categories?business=MRP
+                 &amp;country=GB
+                 &amp;lang=en"
         </code></pre>
     </div>
 
@@ -170,9 +171,7 @@
     "id": 11153,
     "sort": 21,
     "parentId": 10154
-  },
-
-  ...
+  }, ...
 ]</code></pre>
     </div>
 
@@ -246,7 +245,6 @@ def route = sealRoute {
     }
   }
 }
-
 }</code></pre>
     </div>
 
@@ -256,9 +254,9 @@ def route = sealRoute {
 
     <section class="step snap-vertical" data-y="12050" data-x="18000"></section>
 
-    <section class="step snap-vertical" data-y="12750" data-x="18000"></section>
+    <section class="step snap-vertical" data-y="12650" data-x="18000"></section>
 
-    <div class="step" data-x="19500" data-y="12750">
+    <div class="step" data-x="19500" data-y="12650">
         <h2>Metrics Page</h2>
         <pre><code class="json">{
   "counters": {

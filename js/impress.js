@@ -318,11 +318,13 @@
             
             stepsData["impress-" + el.id] = step;
             
+var slideHeight = windowScale
+
+
             css(el, {
                 position: "absolute",
-                // transform: "translate(-50%,-50%)" +
-                // Hacked:
-                transform: "translate(-50%,-350px)" +
+                // Hacked transform: "translate(-50%,50%)" +
+                transform: "translate(-50%,0%)" +
                            translate(step.translate) +
                            rotate(step.rotate) +
                            scale(step.scale),
@@ -379,7 +381,8 @@
             
             css(root, rootStyles);
             css(root, {
-                top: "50%",
+                // Hacked top: "50%",
+                top: "0",
                 left: "50%",
                 transform: perspective( config.perspective/windowScale ) + scale( windowScale )
             });
@@ -750,18 +753,20 @@
         }, false);
         
         // delegated handler for clicking on step elements
-        document.addEventListener("click", function ( event ) {
-            var target = event.target;
-            // find closest step element that is not active
-            while ( !(target.classList.contains("step") && !target.classList.contains("active")) &&
-                    (target !== document.documentElement) ) {
-                target = target.parentNode;
-            }
+
+        //Hacked - Commented out
+        // document.addEventListener("click", function ( event ) {
+        //     var target = event.target;
+        //     // find closest step element that is not active
+        //     while ( !(target.classList.contains("step") && !target.classList.contains("active")) &&
+        //             (target !== document.documentElement) ) {
+        //         target = target.parentNode;
+        //     }
             
-            if ( api.goto(target) ) {
-                event.preventDefault();
-            }
-        }, false);
+        //     if ( api.goto(target) ) {
+        //         event.preventDefault();
+        //     }
+        // }, false);
         
         // touch handler to detect taps on the left and right side of the screen
         // based on awesome work of @hakimel: https://github.com/hakimel/reveal.js
