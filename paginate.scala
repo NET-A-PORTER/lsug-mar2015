@@ -2,6 +2,8 @@ val X_OFFSET = 1500
 
 val lines = scala.io.Source.fromFile("index.html").getLines.toSeq
 
+lines.foreach(println)
+
 var xValue = -X_OFFSET
 var yValue = 0
 var yDelta = 0
