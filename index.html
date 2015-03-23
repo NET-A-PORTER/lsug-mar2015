@@ -260,9 +260,39 @@ def route = sealRoute {
 
     <div class="step" data-x="19500" data-y="12750">
         <h2>Metrics Page</h2>
-        <div style="text-align: center">
-            <img src="" width="800"/>
-        </div>
+        <pre><code class="json">{
+  "counters": {
+    "summaries.exceptions": {
+      "count": 4
+    },
+    "summaries.successes": {
+      "count": 5410
+    }
+    ...
+  },
+  "timers": {
+    "summaries": {
+      "rate_units": "calls/second",
+      "count": 5414,
+      "duration_units": "seconds",
+      "p75": 0.5668252500000001,
+      "m1_rate": 1.6975360357310575E-137,
+      "mean": 0.4096964552529183,
+      "min": 0.024544,
+      "p95": 0.7699509999999999,
+      "m15_rate": 2.964393875E-314,
+      "max": 2.129032,
+      "stddev": 0.24082099926935263,
+      "m5_rate": 1.4821969375E-313,
+      "p99": 1.1494231700000004,
+      "p98": 0.9718056399999999,
+      "mean_rate": 0.018895050966731587,
+      "p50": 0.394811,
+      "p999": 2.1185571420000016
+    },
+    ...
+  }
+}</code></pre>
     </div>
 
     <div class="step" data-x="21000" data-y="12750">
