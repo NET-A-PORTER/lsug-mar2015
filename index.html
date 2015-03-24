@@ -402,7 +402,7 @@ def route = sealRoute {
     </div>
 
     <div class="step" data-x="39000" data-y="14900">
-        <h2>spray-http Testing</h2>
+        <h2>spray-client Testing</h2>
         <pre><code class="scala">class PriceClient {
   
   val pipeline = (
@@ -421,7 +421,7 @@ def route = sealRoute {
     <section class="step snap-vertical" data-y="15150" data-x="39000"></section>
 
     <div class="step" data-x="40500" data-y="15150">
-        <h2>spray-http Testing</h2>
+        <h2>spray-client Testing</h2>
         <pre><code class="scala">class PriceClient(<span class="codehighlight">transport: ActorRef</span>) {
   
   val pipeline = (
@@ -512,12 +512,22 @@ expectMsg(Price(amount = 12345))
         </ul>
     </div>
 
-    <section class="step" data-x="51000" data-y="15850">
+    <div class="step" data-x="51000" data-y="15850">
+        <h2>Summary</h2>
+        <ul>
+            <li>Monitoring for akka/spray apps is getting better</li>
+            <li>Mock the spray-client transport in your tests</li>
+            <li>Keep an eye on your heap</li>
+            <li>Self documenting APIs are hard in spray</li>
+        </ul>
+    </div>
+
+    <section class="step" data-x="52500" data-y="15850">
         <br /><br /><br /><br />
         We ♡ spray + akka
     </section>
 
-    <section class="step" data-y="15850" data-x="52500">
+    <section class="step" data-y="15850" data-x="54000">
         <br /><br /><br /><br />
         We are hiring!
     </section>
