@@ -1,7 +1,8 @@
-NET-A-PORTER impress.js template
-================================
+Product API: lessons learned
+============================
 
-View the demo [here](http://sas02-dev.dave.net-a-porter.com/slidedecks/nap-impress-template/index.html)
+Slide deck for the Net-A-Porter presentation at the LSUG in March 2015.
 
-Modify index.html to make your own slide deck!
+[Meetup event](http://www.meetup.com/london-scala/events/221032681)
 
+[View the slides](http://net-a-porter.github.io/lsug-mar2015/#/step-1)

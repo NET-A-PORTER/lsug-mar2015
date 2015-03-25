@@ -27,7 +27,7 @@
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<div id="impress">
+<div id="impress" data-max-scale="5">
     
     <section class="step" data-x="0" data-y="0" style="text-align: center">
         <br />
@@ -36,6 +36,7 @@
         </h2>
         <h1><em>Product API</em>: lessons learned</h1>
         <h3>Scala, Akka and Spray</h3>
+        <h3><a href="http://github.com/net-a-porter/lsug-mar2015">github.com/net-a-porter/lsug-mar2015</a></h3>
     </section>
 
     <section class="step" data-x="1500" data-y="0">
@@ -58,7 +59,12 @@
         <img src="./images/mrp-listing.png" width="900" />
     </section>
 
-    <div class="step" data-x="7500" data-y="0">
+    <section class="step" data-x="7500" data-y="0">
+        <br /><br /><br /><br />
+        <em style="font-size: 45px;">"We are a technology company that sells fashion"</em>
+    </section>
+
+    <div class="step" data-x="9000" data-y="0">
         <h2>Scala at NET-A-PORTER</h2>
         <ul>
             <li>First Scala commit: March 2011</li>
@@ -72,13 +78,13 @@
         </ul>
     </div>
 
-    <section class="step" data-x="9000" data-y="0">
+    <section class="step" data-x="10500" data-y="0">
         <br />
         <br />
         <img src="./images/scala-workshop.jpg" width="900" />
     </section>    
 
-    <div class="step" data-x="10500" data-y="0">
+    <div class="step" data-x="12000" data-y="0">
         <h2>Product API</h2>
         <ul>
             <li>Scala, Akka, Spray</li>
@@ -88,7 +94,7 @@
         </ul>
     </div>
 
-    <div class="step" data-x="12000" data-y="0">
+    <div class="step" data-x="13500" data-y="0">
         <h2>Listing Endpoint</h2>
         <pre><code class="bash">curl "/product/summaries?business=NAP
                         &amp;categoryIds=2
@@ -99,7 +105,7 @@
         </code></pre>
     </div>
 
-    <div class="step" data-x="13500" data-y="0">
+    <div class="step" data-x="15000" data-y="0">
         <h2>Listing Endpoint</h2>
         <pre><code class="json">{
   "data": [
@@ -167,17 +173,17 @@
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-x="13500" data-y="175"></section>
+    <section class="step snap-vertical" data-x="15000" data-y="175"></section>
 
-    <section class="step snap-vertical" data-x="13500" data-y="800"></section>
+    <section class="step snap-vertical" data-x="15000" data-y="800"></section>
 
-    <section class="step snap-vertical" data-x="13500" data-y="1650"></section>
+    <section class="step snap-vertical" data-x="15000" data-y="1650"></section>
 
-    <section class="step snap-vertical" data-x="13500" data-y="2500"></section>
+    <section class="step snap-vertical" data-x="15000" data-y="2500"></section>
 
-    <section class="step snap-vertical" data-x="13500" data-y="3300"></section>
+    <section class="step snap-vertical" data-x="15000" data-y="3300"></section>
 
-    <div class="step" data-x="15000" data-y="3300">
+    <div class="step" data-x="16500" data-y="3300">
         <h2>Category Endpoint</h2>
         <pre><code class="scala">curl "/categories?business=MRP
                  &amp;country=GB
@@ -185,7 +191,7 @@
         </code></pre>
     </div>
 
-    <div class="step" data-x="16500" data-y="3300">
+    <div class="step" data-x="18000" data-y="3300">
         <h2>Category Endpoint</h2>
         <pre><code class="json">[
   {
@@ -198,34 +204,39 @@
 ]</code></pre>
     </div>
 
-    <section class="step" data-y="3300" data-x="18000">
-        <br /><br /><br /><br /><br />
-        Lessons Learned
-    </section>
-
     <div class="step" data-x="19500" data-y="3300">
+        <h2>Lessons Learned</h2>
+        <ul>
+            <li>Monitoring</li>
+            <li>Testing spray-client code</li>
+            <li>Heap usage</li>
+            <li>API documentation</li>
+        </ul>
+    </div>
+
+    <div class="step" data-x="21000" data-y="3300">
         <h2>Monitoring</h2>
         <div style="text-align: center">
             <img src="./images/spray-metrics-issue.png" width="900"/>
         </div>
     </div>
 
-    <section class="step snap-vertical" data-y="7400" data-x="19500"></section>
+    <section class="step snap-vertical" data-y="7400" data-x="21000"></section>
 
-    <div class="step" data-x="21000" data-y="7400">
+    <div class="step" data-x="22500" data-y="7400">
         <h2>Monitoring</h2>
         <div style="text-align: center">
             <img src="./images/spray-metrics-pr.png" width="900"/>
         </div>
     </div>
 
-    <section class="step snap-vertical" data-y="9200" data-x="21000"></section>
+    <section class="step snap-vertical" data-y="9200" data-x="22500"></section>
 
-    <section class="step snap-vertical" data-y="10750" data-x="21000"></section>
+    <section class="step snap-vertical" data-y="10750" data-x="22500"></section>
 
-    <section class="step snap-vertical" data-y="11350" data-x="21000"></section>
+    <section class="step snap-vertical" data-y="11350" data-x="22500"></section>
 
-    <div class="step" data-y="11350" data-x="22500">
+    <div class="step" data-y="11350" data-x="24000">
         <h2>salad-metrics</h2>
         <pre><code class="scala">trait Service
     extends HttpService
@@ -236,13 +247,13 @@ val factory = MetricsDirectiveFactory()
 
 ...
 
-val brandMetrics = 
-  factory.timer("brands").time &amp; 
-  factory.counter("brands").all.count
-
 val categoryMetrics = 
   factory.timer("categories").time &amp;
   factory.counter("categories").all.count
+
+val summariesMetrics = 
+  factory.timer("summaries").time &amp; 
+  factory.counter("summaries").all.count
   
 ...
 
@@ -273,15 +284,15 @@ def route = sealRoute {
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-y="11855" data-x="22500"></section>
+    <section class="step snap-vertical" data-y="11855" data-x="24000"></section>
 
-    <section class="step snap-vertical" data-y="12625" data-x="22500"></section>
+    <section class="step snap-vertical" data-y="12625" data-x="24000"></section>
 
-    <section class="step snap-vertical" data-y="12825" data-x="22500"></section>
+    <section class="step snap-vertical" data-y="12825" data-x="24000"></section>
 
-    <section class="step snap-vertical" data-y="13450" data-x="22500"></section>
+    <section class="step snap-vertical" data-y="13450" data-x="24000"></section>
 
-    <div class="step" data-x="24000" data-y="13450">
+    <div class="step" data-x="25500" data-y="13450">
         <h2>Metrics Page</h2>
         <pre><code class="json">{
   "counters": {
@@ -318,11 +329,11 @@ def route = sealRoute {
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-y="14160" data-x="24000"></section>
+    <section class="step snap-vertical" data-y="14160" data-x="25500"></section>
 
-    <section class="step snap-vertical" data-y="14900" data-x="24000"></section>
+    <section class="step snap-vertical" data-y="14900" data-x="25500"></section>
 
-    <div class="step" data-x="25500" data-y="14900">
+    <div class="step" data-x="27000" data-y="14900">
         <h2>Grafana</h2>
         <div style="text-align: center">
             <br />
@@ -330,7 +341,7 @@ def route = sealRoute {
         </div>
     </div>
 
-    <div class="step" data-x="27000" data-y="14900">
+    <div class="step" data-x="28500" data-y="14900">
         <h2>What next?</h2>
         <ul>
             <li>Less intrusive</li>
@@ -339,13 +350,13 @@ def route = sealRoute {
         </ul>
     </div>
 
-    <section class="step" data-x="28500" data-y="14900">
+    <section class="step" data-x="30000" data-y="14900">
         <br />
         <br />
         <img src="./images/kamon-logo.png" width="900" />
     </section>
 
-    <div class="step" data-x="30000" data-y="14900">
+    <div class="step" data-x="31500" data-y="14900">
         <h2>Kamon</h2>
         <ul>
             <li>Out of the box support</li>
@@ -358,7 +369,7 @@ def route = sealRoute {
         </ul>
     </div>
 
-    <div class="step" data-x="31500" data-y="14900">
+    <div class="step" data-x="33000" data-y="14900">
         <h2>Kamon</h2>
         <ul>
             <li>Graphite, StatsD and Datadog</li>
@@ -370,7 +381,7 @@ def route = sealRoute {
         </ul>
     </div>
 
-    <div class="step" data-x="33000" data-y="14900">
+    <div class="step" data-x="34500" data-y="14900">
         <h2>HTTP Latency</h2>
         <div style="text-align: center">
             <br />
@@ -378,14 +389,14 @@ def route = sealRoute {
         </div>
     </div>
 
-    <div class="step" data-x="34500" data-y="14900">
+    <div class="step" data-x="36000" data-y="14900">
         <h2>Mailbox Size</h2>
         <div style="text-align: center">
             <img src="./images/cloudwatch-products-mailbox-size.png" width="900"/>
         </div>
     </div>
 
-    <div class="step" data-x="36000" data-y="14900">
+    <div class="step" data-x="37500" data-y="14900">
         <h2>Queued Task Count</h2>
         <div style="text-align: center">
             <img src="./images/cloudwatch-prod-request-count.png" width="900"/>
@@ -393,7 +404,7 @@ def route = sealRoute {
         </div>
     </div>
 
-    <div class="step" data-x="37500" data-y="14900">
+    <div class="step" data-x="39000" data-y="14900">
         <h2>Auto Scaling</h2>
         <div style="text-align: center">
             <img src="./images/gatling.png" width="895"/>
@@ -401,7 +412,7 @@ def route = sealRoute {
         </div>
     </div>
 
-    <div class="step" data-x="39000" data-y="14900">
+    <div class="step" data-x="40500" data-y="14900">
         <h2>spray-client Testing</h2>
         <pre><code class="scala">class PriceClient {
   
@@ -418,9 +429,9 @@ def route = sealRoute {
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-y="15150" data-x="39000"></section>
+    <section class="step snap-vertical" data-y="15150" data-x="40500"></section>
 
-    <div class="step" data-x="40500" data-y="15150">
+    <div class="step" data-x="42000" data-y="15150">
         <h2>spray-client Testing</h2>
         <pre><code class="scala">class PriceClient(<span class="codehighlight">transport: ActorRef</span>) {
   
@@ -437,9 +448,9 @@ def route = sealRoute {
 }</code></pre>
     </div>
 
-    <section class="step snap-vertical" data-y="15400" data-x="40500"></section>
+    <section class="step snap-vertical" data-y="15400" data-x="42000"></section>
 
-    <div class="step" data-x="42000" data-y="15400">
+    <div class="step" data-x="43500" data-y="15400">
         <h2>Production</h2>
         <pre><code class="scala">import akka.io.IO
 import spray.can.Http
@@ -447,7 +458,7 @@ import spray.can.Http
 val prices = new PriceClient(IO(Http))</code></pre>
     </div>
 
-    <div class="step" data-x="43500" data-y="15400">
+    <div class="step" data-x="45000" data-y="15400">
         <h2>Unit Tests</h2>
         <pre><code class="scala">import akka.testkit.TestProbe
 
@@ -468,20 +479,20 @@ expectMsg(Price(amount = 12345))
 </code></pre>
     </div>
 
-    <section class="step snap-vertical" data-y="15850" data-x="43500"></section>
+    <section class="step snap-vertical" data-y="15850" data-x="45000"></section>
 
-    <div class="step" data-x="45000" data-y="15850">
+    <div class="step" data-x="46500" data-y="15850">
         <h2>Heap Usage</h2>
         <div style="text-align: center">
             <img src="./images/eclipse-memory-analyzer.png" width="900"/>
         </div>
     </div>
 
-    <div class="step" data-x="46500" data-y="15850">
+    <div class="step" data-x="48000" data-y="15850">
         <h2>Heap Usage</h2>
         <ul>
             <li><code>-XX:+HeapDumpOnOutOfMemoryError</code></li>
-            <li>Analyse your heap</li>
+            <li>Analyse your heap usage</li>
             <li>Possibly <code>"String".intern()</code>?</li>
             <ul>
                 <li>Warning: this is not free!</li>
@@ -492,14 +503,14 @@ expectMsg(Price(amount = 12345))
         </ul>
     </div>
 
-    <div class="step" data-x="48000" data-y="15850">
+    <div class="step" data-x="49500" data-y="15850">
         <h2>Self Documentation</h2>
         <div style="text-align: center">
             <img src="./images/swagger.png" width="850"/>
         </div>
     </div>
 
-    <div class="step" data-x="49500" data-y="15850">
+    <div class="step" data-x="51000" data-y="15850">
         <h2>Self Documentation</h2>
         <ul>
             <li>spray-routing is powerful</li>
@@ -512,7 +523,7 @@ expectMsg(Price(amount = 12345))
         </ul>
     </div>
 
-    <div class="step" data-x="51000" data-y="15850">
+    <div class="step" data-x="52500" data-y="15850">
         <h2>Summary</h2>
         <ul>
             <li>Monitoring for akka/spray apps is getting better</li>
@@ -522,12 +533,12 @@ expectMsg(Price(amount = 12345))
         </ul>
     </div>
 
-    <section class="step" data-x="52500" data-y="15850">
+    <section class="step" data-x="54000" data-y="15850">
         <br /><br /><br /><br />
         We ♡ spray + akka
     </section>
 
-    <section class="step" data-y="15850" data-x="54000">
+    <section class="step" data-y="15850" data-x="55500">
         <br /><br /><br /><br />
         We are hiring!
     </section>
